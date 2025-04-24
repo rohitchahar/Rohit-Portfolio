@@ -1,229 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">ROHIT</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rohit Chahar - Web Designer & Developer Portfolio">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <title>Rohit Chahar | Web Designer & Developer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6c63ff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
+</head>
+<body class="light-theme">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <div class="preloader-spinner-inner"></div>
+        </div>
+    </div>
+    
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+    
+    <!-- Cursor Effects -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">RC<span>.</span></a>
+                <!-- Social Icons Added Here -->
+            <div class="header-social">
+                <a href="https://github.com/rohitchahar" target="_blank" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rohit-chahar/" target="_blank" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+            </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="bx bx-moon theme-icon"></i>
+                    </button>
+                    
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
                 </div>
             </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Rohit</span><br> Web Designer</h1>
-
-                    <a href="#" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/rohit-chahar/" 
-                       class="home__social-icon" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       aria-label="Visit my LinkedIn profile (opens in new tab)">
-                        <i class='bx bxl-linkedin'></i>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-header">
+                <a href="#home" class="logo">RC<span>.</span></a>
+                <button class="menu-close" aria-label="Close menu">
+                    <i class="bx bx-x"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-menu-links">
+                <a href="#home" class="mobile-menu-link active">Home</a>
+                <a href="#about" class="mobile-menu-link">About</a>
+                <a href="#skills" class="mobile-menu-link">Skills</a>
+                <a href="#work" class="mobile-menu-link">Work</a>
+                <a href="#contact" class="mobile-menu-link">Contact</a>
+            </div>
+            
+            <div class="mobile-menu-footer">
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/rohit-chahar" target="_blank" class="social-link">
+                        <i class="bx bxl-linkedin"></i>
                     </a>
+                    <a href="https://github.com/rohitchahar" target="_blank" class="social-link">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://instagram.com/rohit__chahar" target="_blank" class="social-link">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h4 class="hero-subtitle">Hello, I'm</h4>
+                    <h1 class="hero-title">Rohit Chahar</h1>
+                    <h3 class="hero-text">I'm a <span class="typed-text"></span></h3>
+                    <p class="hero-description">Crafting digital experiences with clean code and creative design solutions that drive results.</p>
                     
-                    <!-- Behance (add your actual link when ready) -->
-                    <a href="https://www.behance.net/your-username" 
-                       class="home__social-icon" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       aria-label="Visit my Behance portfolio (opens in new tab)">
-                        <i class='bx bxl-behance'></i>
-                    </a>
-                    
-                    <!-- GitHub -->
-                    <a href="https://github.com/rohitchahar" 
-                       class="home__social-icon" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       aria-label="Visit my GitHub profile (opens in new tab)">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                </div>
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="60" y="110" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpeg" alt="">
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get In Touch</span>
+                            <i class="bx bx-paper-plane"></i>
+                        </a>
+                        <a href="#work" class="btn btn-secondary">
+                            <span>View Work</span>
+                            <i class="bx bx-code-alt"></i>
+                        </a>
                     </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Rohit</h2>
-                        <p class="about__text">Hi, I'm Rohit Chahar, a passionate and driven Computer Science graduate. I specialize in web development, data operations, and business strategy, with hands-on experience in both tech and client-facing roles.
-
-                        </p>           
-                    </div>                                   
                 </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
+                
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="assets/img/about.jpeg" alt="Rohit Chahar" class="profile-image">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About <span>Me</span></h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="assets/img/perfil.png" alt="Rohit Chahar" class="profile-image">
+                            <div class="image-border"></div>
+                            <div class="image-dots"></div>
                         </div>
                     </div>
                     
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    <div class="about-info">
+                        <h3 class="about-title">Who am I?</h3>
+                        <p class="about-text">I'm Rohit Chahar, a passionate web designer and developer based in New Delhi, India. With a background in Computer Science and years of hands-on experience, I create digital solutions that blend aesthetics with functionality.</p>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="bx bx-briefcase"></i>
+                                </div>
+                                <div>
+                                    <h4>Experience</h4>
+                                    <p>3+ Years Working</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="bx bx-check-shield"></i>
+                                </div>
+                                <div>
+                                    <h4>Projects</h4>
+                                    <p>50+ Completed</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="bx bx-support"></i>
+                                </div>
+                                <div>
+                                    <h4>Support</h4>
+                                    <p>Online 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <span>Download CV</span>
+                                <i class="bx bx-download"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <span>Hire Me</span>
+                                <i class="bx bx-phone"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Experience and Projects</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span>Skills</span></h2>
+                    <p class="section-subtitle">What I bring to the table</p>
+                </div>
+                
+                <div class="skills-content">
+                    <div class="skills-info">
+                        <h3 class="skills-title">Technical Expertise</h3>
+                        <p class="skills-text">I've developed a diverse skill set through years of experience working on various projects across different industries.</p>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="bx bxl-html5"></i>
+                                    </div>
+                                    <h4>HTML5</h4>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="bx bxl-css3"></i>
+                                    </div>
+                                    <h4>CSS3</h4>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="bx bxl-javascript"></i>
+                                    </div>
+                                    <h4>JavaScript</h4>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="bx bxl-react"></i>
+                                    </div>
+                                    <h4>React</h4>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="bx bxl-nodejs"></i>
+                                    </div>
+                                    <h4>Node.js</h4>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-cards">
+                        <div class="skill-card">
+                            <div class="card-icon">
+                                <i class="bx bx-palette"></i>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p>Creating intuitive and visually appealing user interfaces with exceptional user experience.</p>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="card-icon">
+                                <i class="bx bx-code-alt"></i>
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>Building responsive, performant websites with clean, maintainable code.</p>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="card-icon">
+                                <i class="bx bx-mobile-alt"></i>
+                            </div>
+                            <h3>Mobile First</h3>
+                            <p>Designing with mobile users in mind first, then scaling up to larger devices.</p>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="card-icon">
+                                <i class="bx bx-rocket"></i>
+                            </div>
+                            <h3>Performance</h3>
+                            <p>Optimizing websites for speed and efficiency to enhance user experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Work Section -->
+        <section id="work" class="work-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span>Work</span></h2>
+                    <p class="section-subtitle">Recent projects and case studies</p>
+                </div>
+                
+                <div class="work-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="app">App</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+                
+                <div class="work-grid">
+                    <div class="work-item web" data-category="web">
+                        <div class="work-card">
+                            <img src="assets/img/work1.jpg" alt="E-commerce Website">
+                            <div class="work-overlay">
+                                <h3>E-commerce Platform</h3>
+                                <p>Full-stack development with custom CMS</p>
+                                <a href="#" class="work-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item app" data-category="app">
+                        <div class="work-card">
+                            <img src="assets/img/work2.jpg" alt="Fitness App">
+                            <div class="work-overlay">
+                                <h3>Fitness Tracker</h3>
+                                <p>Mobile application UI/UX design</p>
+                                <a href="#" class="work-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item design" data-category="design">
+                        <div class="work-card">
+                            <img src="assets/img/work3.jpg" alt="Brand Identity">
+                            <div class="work-overlay">
+                                <h3>Brand Identity</h3>
+                                <p>Complete branding for tech startup</p>
+                                <a href="#" class="work-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item web" data-category="web">
+                        <div class="work-card">
+                            <img src="assets/img/work4.jpg" alt="Portfolio Template">
+                            <div class="work-overlay">
+                                <h3>Portfolio Template</h3>
+                                <p>Creative portfolio for designers</p>
+                                <a href="#" class="work-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item app" data-category="app">
+                        <div class="work-card">
+                            <img src="assets/img/work5.jpg" alt="Food Delivery App">
+                            <div class="work-overlay">
+                                <h3>Food Delivery App</h3>
+                                <p>UI/UX for restaurant application</p>
+                                <a href="#" class="work-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="work-item design" data-category="design">
+                        <div class="work-card">
+                            <img src="assets/img/work6.jpg" alt="Corporate Website">
+                            <div class="work-overlay">
+                                <h3>Corporate Website</h3>
+                                <p>Business website with admin panel</p>
+                                <a href="#" class="work-link">
+                                    <i class="bx bx-link-external"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-cta">
+                    <a href="#" class="btn btn-primary">
+                        <span>View All Projects</span>
+                        <i class="bx bx-chevron-right"></i>
                     </a>
                 </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Submit" class="contact__button button">
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In <span>Touch</span></h2>
+                    <p class="section-subtitle">Let's work together</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">Contact Information</h3>
+                        <p class="contact-info-text">Feel free to reach out for collaborations or just to say hello!</p>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bx bx-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:hello@rohitchahar.com">hello@rohitchahar.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bx bx-phone"></i>
+                                </div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+911234567890">+91 12345 67890</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="bx bx-map"></i>
+                                </div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>New Delhi, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social">
+                            <a href="https://linkedin.com/in/rohit-chahar" target="_blank" class="social-link">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/rohitchahar" target="_blank" class="social-link">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                            <a href="https://instagram.com/rohit__chahar" target="_blank" class="social-link">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                            <span class="form-highlight"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="bx bx-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Rohit</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/rohit__chahar/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Rtc. All Rigths Reserved</p>
-        </footer>
-
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">Rohit<span>.</span></a>
+                    <p>Creating digital experiences that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-group">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">UI/UX Design</a></li>
+                            <li><a href="#">Branding</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:hello@rohitchahar.com">hello@rohitchahar.com</a></li>
+                            <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                            <li>New Delhi, India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Rohit Chahar. All rights reserved.</p>
+                
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/rohit-chahar" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/rohitchahar" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://instagram.com/rohit__chahar" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="bx bx-chevron-up"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
